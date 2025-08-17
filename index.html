@@ -222,7 +222,7 @@
     /* --- Work Updates Grid - Refined for Professional Icons --- */
     .work-updates-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Adjusted minmax */
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjusted minmax for bigger buttons */
       gap: 15px;
       padding: 10px;
       width: 100%;
@@ -232,10 +232,10 @@
     .work-item {
       position: relative;
       text-align: center;
-      padding: 12px; /* Adjusted padding */
+      padding: 20px; /* Increased padding for bigger buttons */
       background: var(--glass-bg); /* Use glass background */
       backdrop-filter: var(--glass-blur); /* Apply blur */
-      border-radius: var(--radius);
+      border-radius: var(--radius-lg); /* Larger radius for bigger buttons */
       box-shadow: var(--shadow);
       cursor: pointer;
       transition: var(--transition);
@@ -246,7 +246,7 @@
       justify-content: center;
       text-decoration: none;
       color: var(--dark);
-      min-height: 100px; /* Ensure a minimum height for consistency */
+      min-height: 120px; /* Ensure a minimum height for consistency and size */
       overflow: hidden;
       border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle glass border */
     }
@@ -270,7 +270,7 @@
       opacity: 0;
       transition: opacity 0.3s ease;
       z-index: 0; /* Behind content */
-      border-radius: var(--radius); /* Match item radius */
+      border-radius: var(--radius-lg); /* Match item radius */
     }
 
     .work-item:hover::after,
@@ -280,8 +280,8 @@
 
     /* Style for icons */
     .work-item i {
-      font-size: 28px; /* Larger icons */
-      margin-bottom: 6px; /* Space between icon and text */
+      font-size: 36px; /* Larger icons */
+      margin-bottom: 8px; /* Space between icon and text */
       transition: var(--transition);
       position: relative; /* For z-index if needed */
       z-index: 1; /* Above the ::after glow */
@@ -297,7 +297,7 @@
     .work-item[data-type="SMM Task"] i { color: #ff9800; }
 
     .work-item span.work-item-name { /* For the actual visible text */
-      font-size: 11px;
+      font-size: 14px; /* Larger text */
       color: var(--dark);
       display: block; /* Ensures it takes full width */
       font-weight: 500;
@@ -718,9 +718,9 @@
 
       /* Adjusted for work updates with icons */
       .work-updates-grid { gap: 12px; padding: 8px; margin-top: 15px; }
-      .work-item { padding: 10px; min-height: 90px; } /* Adjusted fixed height */
-      .work-item i { font-size: 24px; margin-bottom: 5px; } /* Adjusted icon size */
-      .work-item span.work-item-name { font-size: 10px; } /* Adjusted text size */
+      .work-item { padding: 15px; min-height: 100px; } /* Adjusted for bigger size on mobile */
+      .work-item i { font-size: 32px; margin-bottom: 6px; } /* Adjusted icon size */
+      .work-item span.work-item-name { font-size: 12px; } /* Adjusted text size */
       .work-item .tooltip { font-size: 9px; top: -30px; padding: 3px 6px; } /* Adjusted tooltip size/position */
 
       .community-buttons { gap: 12px; padding: 8px; } .community-btn { padding: 12px; font-size: 12px; }
@@ -761,9 +761,9 @@
         .section-header { font-size: 18px; padding: 8px 12px; } .poster-slider { height: 160px; /* Adjust height */ }
 
         /* Adjusted for work updates with icons */
-        .work-item { padding: 8px; min-height: 80px; } /* Adjusted fixed height */
-        .work-item i { font-size: 20px; margin-bottom: 4px; }
-        .work-item span.work-item-name { font-size: 9px; }
+        .work-item { padding: 12px; min-height: 90px; } /* Adjusted fixed height for smaller screens */
+        .work-item i { font-size: 28px; margin-bottom: 5px; }
+        .work-item span.work-item-name { font-size: 11px; }
         .work-item .tooltip { font-size: 8px; top: -25px; padding: 2px 5px; }
 
         .community-btn { padding: 10px; font-size: 11px; } .community-btn i { font-size: 14px; }
